@@ -2,9 +2,9 @@
   <div>
     <Header />
     <div class="content">
-      <h2>Welcome to "The Ranch"</h2>
+      <h2>Welcome, enable location to get updates</h2>
       <img src="../assets/placeholder.svg" alt />
-      <h6>Enable location to get updates</h6>
+      <h6>Enable location</h6>
       <router-link to="/admin">Admin</router-link>
     </div>
   </div>

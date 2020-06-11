@@ -2,12 +2,12 @@
   <section>
     <Header />
     <div class="main">
-      <h3>Admin</h3>
+      <h3>Covid19KE Geofence</h3>
       <GmapMap
         :center="center"
         :zoom="zoom"
         map-type-id="terrain"
-        style="width: 600px; height: 400px"
+        style="width: 325px; height: 400px"
         ref="mapRef"
       >
         <GmapMarker
@@ -20,7 +20,7 @@
       </GmapMap>
       <h4>Location Alerts</h4>
       <div class="alert" v-if="showAlert">
-        <p>This user has left the ranch</p>
+        <p>You have left the affected area</p>
       </div>
 
       <div class="location alert" v-if="showLocationUpdate">
@@ -46,18 +46,18 @@ export default {
       showLocationUpdate: false,
       zoom: 16,
       center: {
-        lat: -1.2413047,
-        lng: 36.7927116
+        lat: 1.3013,
+        lng: 36.8071
       },
       polygon: [
-        { lat: -1.2414047, lng: 36.792721 },
-        { lat: -1.2414047, lng: 36.792721 },
-        { lat: -1.2414047, lng: 36.792721 },
-        { lat: -1.2414047, lng: 36.792721 },
-        { lat: -1.2414047, lng: 36.792721 },
-        { lat: -1.2414047, lng: 36.792721 },
-        { lat: -1.2414047, lng: 36.792721 },
-        { lat: -1.2414047, lng: 36.792721 }
+        { lat: 1.3013, lng: 36.8071 },
+        { lat: 1.3013, lng: 36.8071 },
+        { lat: 1.3013, lng: 36.8071 },
+        { lat: 1.3013, lng: 36.8071 },
+        { lat: 1.3013, lng: 36.8071 },
+        { lat: 1.3013, lng: 36.8071 },
+        { lat: 1.3013, lng: 36.8071 },
+        { lat: 1.3013, lng: 36.8071 }
       ]
     };
   },
@@ -70,7 +70,7 @@ export default {
       };
       const latLng = new this.google.maps.LatLng(position);
       this.showLocationUpdate = true;
-      this.message = "The user's location has changed";
+      this.message = "Your location has changed";
       if (
         !this.google.maps.geometry.poly.containsLocation(
           latLng,
@@ -79,7 +79,7 @@ export default {
       ) {
         this.showAlert = true;
       } else {
-        this.message = "The user is currently in the ranch";
+        this.message = "You have entered a covid19 prevalent area";
       }
     }
   },

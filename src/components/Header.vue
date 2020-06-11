@@ -1,16 +1,16 @@
 <template>
   <header>
-    <div class="brand">
-      <h5>The Ranch</h5>
+    <!-- <div class="brand">
+      <h5>Covid19KE Geofencing</h5>
     </div>
     <div class="nav">
       <ul>
         <li>
           <img src="../assets/boy.svg" alt="avatar" />
-          <span>John P.</span>
+          <span>Covidapp</span>
         </li>
       </ul>
-    </div>
+    </div> -->
   </header>
 </template>
 

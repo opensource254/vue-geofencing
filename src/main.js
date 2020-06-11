@@ -14,7 +14,7 @@ Vue.use(VueGoogleMaps, {
 Vue.use(
   new VSocket({
     debug: true,
-    connection: "http://192.168.254.72:4001"
+    connection: "https://geo-server1.herokuapp.com/"
   })
 );
 
